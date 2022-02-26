@@ -1,0 +1,56 @@
+public static int[] ordenarporseleccion ()
+        {
+        
+        int [] garaje ={3500 ,2320,1000,1200,4100,1000,3600,10000,7120,3000,8500};
+        int n= garaje.length , iMenor;
+        
+  
+        for( int i = 0; i < n-1; i++)
+        {
+            iMenor = i;
+            for (int j=i+1; j<n; j++) if(garaje[j]<garaje[iMenor]) iMenor=j;
+              int aux= garaje[i];
+            if(i != iMenor)
+                garaje[i] = garaje[iMenor];
+            garaje[iMenor]=aux;
+        }    
+        return garaje;
+        } 
+        
+        
+        
+         public static int[] ordenarporseleccionMotos ()
+        {
+        
+        int [] garajem ={4000 ,3455,9901,7289,1100,1000,3640,11000,7120,3030,8600};
+        int n= garajem.length , iMenor;
+        
+  
+        for( int i = 0; i < n-1; i++)
+        {
+            iMenor = i;
+            for (int j=i+1; j<n; j++) if(garajem[j]<garajem[iMenor]) iMenor=j;
+              int temporal = garajem[i];
+            if(i != iMenor)
+                garajem[i] = garajem[iMenor];
+            garajem[iMenor]= temporal;
+        }    
+        return garajem;
+        } 
+        
+        
+        
+        // Esto va a ir en un case
+        
+         System.out.print("Arreglo original con precios de carros desordenados en bodega:");
+          int [] garaje ={3500 ,2320,1000,1200,4100,1000,3600,10000,7120,3000,8500};
+          System.out.println(Arrays.toString(garaje));
+          System.out.println("Arreglo ordenado de los precios de los carros en bodega:" + Arrays.toString(ordenarporseleccion()));
+           System.out.println("*********************************************************************************************************");
+          System.out.print("Arreglo original con precios de Motos desordenados en bodega:");
+          int [] garajem ={4000 ,3455,9901,7289,1100,1000,3640,11000,7120,3030,8600};
+          System.out.println(Arrays.toString(garaje));
+          System.out.println("Arreglo ordenado de los precios de las Motos en bodega:" + Arrays.toString(ordenarporseleccionMotos())); 
+        
+        
+        
