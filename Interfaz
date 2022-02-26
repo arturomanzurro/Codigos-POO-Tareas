@@ -1,0 +1,85 @@
+
+//En la clase Motos
+public float tofloat(){
+         
+          return this.precioMoto;
+    
+     }
+     
+       
+    @Override
+    public boolean mayorque(Object o) {
+        
+        Motos mot = (Motos) o;
+        return this.tofloat()>mot.tofloat();
+    }
+
+    @Override
+    public boolean menorQue(Object o) {
+        Motos mot = (Motos) o;
+        return this.tofloat()<mot.tofloat();
+    }
+
+    @Override
+    public boolean igualQue(Object o) {
+        Motos mot = (Motos) o;
+        return this.tofloat()==mot.tofloat();
+    }
+
+    @Override
+    public boolean mayorIgual(Object o) {
+        Motos mot = (Motos) o;
+        return this.tofloat()>=mot.tofloat();
+    }
+
+    @Override
+    public boolean menorIgual(Object o) {
+        Motos mot = (Motos) o;
+        return this.tofloat()<=mot.tofloat();
+    }
+    
+        
+        
+        
+// En clase Carros        
+        
+   public float tofloat()
+    {
+        return this.precio;
+    }
+    @Override
+    public boolean mayorque(Object o) {
+        
+       Carros car = (Carros) o;
+       return this.tofloat() > car.tofloat();
+    }
+
+    @Override
+    public boolean menorQue(Object o) {
+        
+        Carros car = (Carros) o;
+        return this.tofloat() < car.tofloat();
+
+    }
+
+    @Override
+    public boolean igualQue(Object o) {
+        
+        Carros car = (Carros) o;
+       return this.tofloat()== car.tofloat();
+    }  
+
+    @Override
+    public boolean mayorIgual(Object o) {
+        Carros car = (Carros) o;
+        return this.tofloat()>= car.tofloat();
+  
+    }
+
+    @Override
+    public boolean menorIgual(Object o) {
+        
+        Carros car = (Carros) o;
+        return this.tofloat()<= car.tofloat();
+ 
+    }
